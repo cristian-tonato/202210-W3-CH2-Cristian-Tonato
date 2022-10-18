@@ -1,4 +1,4 @@
-export abstract class Component {
+export abstract class Pets {
     render(selector: string, template: string) {
         const element = document.querySelector(selector);
         if (element === null) return false;

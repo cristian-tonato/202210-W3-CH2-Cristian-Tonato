@@ -1,7 +1,6 @@
-import { Component } from "./component.js";
+import { Pets } from './pets.js';
 
-
-export class Main extends Component {
+export class Main extends Pets {
     template: string;
     constructor(public selector: string) {
         super();

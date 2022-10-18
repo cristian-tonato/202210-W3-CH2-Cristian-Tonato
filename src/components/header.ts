@@ -1,12 +1,12 @@
-import { Component } from "./component.js";
+import { Pets } from './pets.js';
 
-export class Header extends Component{
+export class Header extends Pets {
     template: string;
-    constructor(public selector:string){
+    constructor(public selector: string) {
         super();
-        this.template= this.createTemplate();
+        this.template = this.createTemplate();
     }
-    createTemplate(){
+    createTemplate() {
         return `
         <header>
         <h1>PETS</h1>
