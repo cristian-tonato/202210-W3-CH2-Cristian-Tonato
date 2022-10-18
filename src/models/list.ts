@@ -16,6 +16,6 @@ export class List{
         public breed: string,
         public isAdopted: boolean,
         public owner: string){
-            
+            this.id= List.crearId();
         }
 }
