@@ -1,16 +1,18 @@
 import { Component } from './component.js';
 
 export class Footer extends Component {
-    template: string;
+    HTMLtemplate: string;
     constructor(public selector: string) {
         super();
-        this.template = this.createTemplate();
+        this.HTMLtemplate = this.createTemplate();
+        this.renderAdd(this.selector, this.HTMLtemplate)
     }
     createTemplate() {
         return `
         <footer>
-        <address>PETS.COM</address>
-        </footer>
+        <address>
+        Cristian Tonato - PETS.COM
+        </address></footer>
         `;
     }
 }

@@ -1,4 +1,4 @@
-import { Component } from "../component.js";
+import { Component } from "./component.js";
 import { PETS } from "../models/data.js";
 import { Pets } from "../models/pets.js";
 import { AddPets } from "./add.pets.js";
@@ -35,7 +35,7 @@ export class PetsList extends Component {
 
     createTemplate() {
         let template = `<section>
-                <h2>Tareas</h2>
+                <h2>Pets</h2>
                 <slot id="add-Pets"></slot>
                 <ul>`;
         this.pets.forEach((item: Pets) => {
@@ -50,12 +50,12 @@ export class PetsList extends Component {
     }
     handleAdd(ev: Event) {
         ev.preventDefault();
-        const petname = (document.querySelector('#resp1') as HTMLInputElement)
+        const petname = (document.querySelector('#pet1') as HTMLInputElement)
             .value;
         const breed = (
-            document.querySelector('#resp3') as HTMLInputElement
+            document.querySelector('#pet2') as HTMLInputElement
         ).value;
-        const owner = (document.querySelector('#resp4') as HTMLInputElement)
+        const owner = (document.querySelector('#pet3') as HTMLInputElement)
             .value;
 
         this.pets.push(new Pets(petname,breed,owner));

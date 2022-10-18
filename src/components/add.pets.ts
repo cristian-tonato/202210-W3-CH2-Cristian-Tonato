@@ -1,20 +1,23 @@
 import { Component } from './component.js';
 
 export class AddPets extends Component {
-    template: string;
+    HTMLtemplate: string;
     constructor(public selector: string) {
         super();
-        this.template = this.createTemplate();
-        this.renderOuter(this.selector, this.template);
+        this.HTMLtemplate = this.createTemplate();
+        this.renderOuter(this.selector, this.HTMLtemplate);
     }
     createTemplate() {
         return `
         <form>
             <div>
-                <input type="text" id="title" placeholder="Cuál es la tarea" required>
+                <input type="text" id="Pet1" placeholder="Name" required>
             </div>
             <div>
-                <input type="text" id="resp" placeholder="Quien es el responsable">
+                <input type="text" id="pet2" placeholder="Breed">
+            </div>
+            <div>
+                <input type="text" id="pet3" placeholder="Owner">
             </div>
             <button type="submit">Guardar</button>
         </form>
