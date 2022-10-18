@@ -1,21 +1,21 @@
-export abstract class Component {
-    render(selector: string, template: string) {
+export class Component {
+    render(selector: string, HTMLtemplate: string) {
         const element = document.querySelector(selector);
         if (element === null) return false;
-        element.innerHTML = template;
+        element.innerHTML = HTMLtemplate;
         return true;
     }
 
-    renderAdd(selector: string, template: string) {
+    renderAdd(selector: string, HTMLtemplate: string) {
         const element = document.querySelector(selector);
         if (element === null) return false;
-        element.innerHTML += template;
+        element.innerHTML += HTMLtemplate;
         return true;
     }
-    renderOuter(selector: string, template: string) {
+    renderOuter(selector: string, HTMLtemplate: string) {
         const element = document.querySelector(selector);
         if (element === null) return false;
-        element.outerHTML = template;
+        element.outerHTML = HTMLtemplate;
         return true;
     }
 }

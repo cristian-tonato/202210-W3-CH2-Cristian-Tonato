@@ -15,7 +15,8 @@ export class Pets{
          
         public petname: string,
         public breed: string,
-        public owner: string){
+        public owner: string
+        ){
             this.id= Pets.crearId();
             this.petname= petname;
             this.breed=breed;
