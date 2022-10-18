@@ -1,6 +1,6 @@
-import { Pets } from './pets.js';
+import { Component } from './component.js';
 
-export class Header extends Pets {
+export class Header extends Component {
     template: string;
     constructor(public selector: string) {
         super();

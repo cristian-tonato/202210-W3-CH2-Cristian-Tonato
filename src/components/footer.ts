@@ -1,6 +1,6 @@
-import { Pets } from './pets.js';
+import { Component } from './component.js';
 
-export class Footer extends Pets {
+export class Footer extends Component {
     template: string;
     constructor(public selector: string) {
         super();
