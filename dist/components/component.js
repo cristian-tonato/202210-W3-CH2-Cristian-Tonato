@@ -1,23 +1,32 @@
 export class Component {
-    render(selector, HTMLtemplate) {
-        const element = document.querySelector(selector);
-        if (element === null)
+    renderInner(selector, template) {
+        if (!selector)
             return false;
-        element.innerHTML = HTMLtemplate;
+        const element = document.querySelector(selector);
+        if (element === null) {
+            return false;
+        }
+        element.innerHTML = template;
         return true;
     }
-    renderAdd(selector, HTMLtemplate) {
-        const element = document.querySelector(selector);
-        if (element === null)
+    renderOuter(selector, template) {
+        if (!selector)
             return false;
-        element.innerHTML += HTMLtemplate;
+        const element = document.querySelector(selector);
+        if (element === null) {
+            return false;
+        }
+        element.outerHTML += template;
         return true;
     }
-    renderOuter(selector, HTMLtemplate) {
-        const element = document.querySelector(selector);
-        if (element === null)
+    renderAdd(selector, template) {
+        if (!selector)
             return false;
-        element.outerHTML = HTMLtemplate;
+        const element = document.querySelector(selector);
+        if (element === null) {
+            return false;
+        }
+        element.innerHTML += template;
         return true;
     }
 }

@@ -1,8 +1,7 @@
-import { Pets } from "./pets.js";
+import { Pet } from './pet.js';
 
-
-export const PETS: Array<Pets>=[
-    new Pets("Pluto","Husky","Mickey"),
-    new Pets("Bola de nieve","white", "John Snow"),
-    new Pets("Piolin","yellow", "Grandma"),
-];
+export const PETS: Array<Pet> = [
+    new Pet("Pluto","Dog","Mickey"),
+    new Pet("Ball Snow","Cat","Cleopatra"),
+    new Pet("Ghost","Dog","John Snow")
+]

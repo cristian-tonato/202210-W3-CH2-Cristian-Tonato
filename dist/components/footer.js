@@ -3,15 +3,10 @@ export class Footer extends Component {
     constructor(selector) {
         super();
         this.selector = selector;
-        this.HTMLtemplate = this.createTemplate();
-        this.renderAdd(this.selector, this.HTMLtemplate);
+        this.template = this.createTemplate();
+        this.renderAdd(this.selector, this.template);
     }
     createTemplate() {
-        return `
-        <footer>
-        <address>
-        Cristian Tonato - PETS.COM
-        </address></footer>
-        `;
+        return `<footer><address>Cristian Tonato</address></footer>`;
     }
 }
