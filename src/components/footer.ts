@@ -7,12 +7,10 @@ export class Footer extends Component {
         this.HTMLtemplate = this.createTemplate();
         this.renderAdd(this.selector, this.HTMLtemplate)
     }
-    createTemplate() {
+    createTemplate(): string {
         return `
         <footer>
-        <address>
-        Cristian Tonato - PETS.COM
-        </address></footer>
+        <address>Cristian Tonato </address></footer>
         `;
     }
 }
