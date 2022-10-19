@@ -1,17 +1,15 @@
 import { Component } from './component.js';
 
 export class Header extends Component {
-    HTMLtemplate: string;
+    template: string;
     constructor(public selector: string) {
         super();
-        this.HTMLtemplate = this.createTemplate();
-        this.renderAdd(this.selector,this.HTMLtemplate)
+        this.template = this.createTemplate();
+        this.renderAdd(this.selector, this.template);
     }
     createTemplate() {
-        return `
-        <header>
-        <h1>PETS</h1>
-    </header>
-        `;
+        return `<header><h1>WORD PET</h1>
+        <img src="./img/png-clipart-street-dog-color-leg-blue-dog-blue-white.png" class="img" alt="" srcset="">
+        </header>`;
     }
 }
